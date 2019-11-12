@@ -1,0 +1,29 @@
+body {
+    background: #c4ebaea2;
+    font: normal 16pt Arial;
+    color: darkslategray;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    background: whitesmoke;
+    border-radius: 10px;
+    border:1px solid green;
+    width: 400px;
+    padding:15px;
+    margin: auto;
+    box-shadow: 7px 7px 12px darkslategray;
+}
+
+select {
+    width: 150px;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}

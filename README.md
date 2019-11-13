@@ -8,13 +8,13 @@ Install the gorilla/mux package. Use the _go get_ command to install the package
 
 > go get -u github.com/gorilla/mux
 
-Run _main.go_ then like so:
+Run _main.go_ like so:
 
 > go run main.go
 
 Now you can acces the page with the browser at http://localhost:8080 or using the host ip address with port 8080
 
-## **GoLang Webapp _(pt-BR)_**
+## **GoLang WebApp _(pt-BR)_**
 
 Um Webapp simples criado usando GoLang como Server e HTML como Front.
 

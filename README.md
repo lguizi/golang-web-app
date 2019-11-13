@@ -12,7 +12,7 @@ Run _main.go_ like so:
 
 > go run main.go
 
-Now you can acces the page with the browser at http://localhost:8080 or using the host ip address with port 8080
+Now you can access the page with the browser at http://localhost:8080 or using the host ip address with port 8080
 
 ## **GoLang WebApp _(pt-BR)_**
 
@@ -28,4 +28,4 @@ Execute _main.go_ assim:
 
 > go run main.go
 
-Agora voce pode acessar a pagina com o browser em http://localhost:8080 ou usando o ip do host com a porta 8080
+Agora você pode acessar a página com o browser em http://localhost:8080 ou usando o ip do host com a porta 8080

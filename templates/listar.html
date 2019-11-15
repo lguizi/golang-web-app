@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página Teste Estagiário - GoLang</title>
+    <title>Página de Contatos - Servidor Go</title>
     <link rel="stylesheet" href="static/estilo.css">
 </head>
 
 <body>
 
     <header>
-        <h1>• Página de cadastros •</h1>
+        <h1>• LISTA DE CONTATOS •</h1>
     </header>
 
     <section>
         <div>
-           <p>LISTAR CONTATOS:</p>
-           <p><select name="sel" id="sel" size="10"></select></p>
-           <p><form action="/" method="POST"><input type="submit" value="Voltar"></form></p>
+            <p>Selecione um contato e escolha uma das opções:</p>
+            <p><select name="sel" id="sel" size="10">
+            {{ range . }}
+            <option value="">{{ .Id }} {{ .Nome }}</option>
+            {{ end }}
+            </select></p>
+           <div class="button-container">
+               <p><form action="/editar" method="POST">
+                <div>
+                    <input type="submit" value="Editar">
+                </div>
+            </form>
+            <form action="/remover" method="POST">
+                <div>
+                    <input type="submit" value="Remover">
+                </div>
+            </form></p>
+            <p><form action="/" method="POST"><input type="submit" value="Voltar"></form></p>
+            </div>
         </div>
     </section>
 

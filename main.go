@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"github.com/gorilla/mux"
 	"html/template"
 	"database/sql"
     _ "github.com/go-sql-driver/mysql"
@@ -34,7 +33,7 @@ func bdCad() (db *sql.DB) {
 
 
 func index(w http.ResponseWriter, r *http.Request) {
-	temp.ExecuteTemplate(w, "index.html", nil)
+	temp.ExecuteTemplate(w, "index", nil)
 }
 
 func listar(w http.ResponseWriter, r *http.Request) {
@@ -60,7 +59,7 @@ func listar(w http.ResponseWriter, r *http.Request) {
 		listaCad.Email = email
         arrayNomes = append(arrayNomes, listaCad)
 	}
-	temp.ExecuteTemplate(w, "listar.html", arrayNomes)
+	temp.ExecuteTemplate(w, "contatos", arrayNomes)
 	defer db.Close()
 }
 
@@ -70,10 +69,8 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	fmt.Println("Server ONLINE na porta: 8080")
 
-	r := mux.NewRouter()
-	r.HandleFunc("/", index)
-	r.HandleFunc("/listar", listar)
-	http.Handle("/", r)
+	http.HandleFunc("/", index)
+	http.HandleFunc("/contatos", listar)
 	http.ListenAndServe(":8080", nil)
-
+	
 }

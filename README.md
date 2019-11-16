@@ -4,11 +4,12 @@ A simple Webapp created using GoLang as Server and HTML as Front.
 
 **Installation**
 
-Install gorilla/mux and go-sql-driver/mysql packages. Use the _go get_ command to install the packages from GitHub like so: 
-```
-go get -u github.com/gorilla/mux
+Install go-sql-driver/mysql package. Use the _go get_ command to install the package from GitHub like so: 
+
+`
 go get -u github.com/go-sql-driver/mysql
-```
+`
+
 Create the _cadastros_ table on your mysql database:
 ```
 DROP TABLE IF EXISTS `cadastros`;
@@ -46,9 +47,8 @@ Um Webapp simples criado usando GoLang como Server e HTML como Front.
 
 **Instalação**
 
-Instale os pacote gorilla/mux e go-sql-driver/mysql. Use o comando _go get_ para instalar os pacotes pelo GitHub assim:
+Instale o pacote go-sql-driver/mysql. Use o comando _go get_ para instalar o pacote pelo GitHub assim:
 ```
-go get -u github.com/gorilla/mux
 go get -u github.com/go-sql-driver/mysql
 ```
 Create a tabela _cadastros_ no seu banco de dados mysql:
@@ -81,3 +81,4 @@ Agora você pode acessar a página com o browser em http://localhost:8080 ou usa
 - [ ] Editar contatos do banco de dados
 - [ ] Remover contatos do banco de dados
 - [ ] Criar novos contatos no banco de dados
+

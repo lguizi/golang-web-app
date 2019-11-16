@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página de Contatos - Servidor Go</title>
-    <link rel="stylesheet" href="static/estilo.css">
-</head>
-
-<body>
-
-    <header>
-        <h1>• MENU •</h1>
-    </header>
-
-    <section>
-        <div>
-            <p>Escolha uma das opções:</p>
-            <p><form action="/listar" method="post"><input type="submit" value="LISTAR CONTATOS"></form></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; Luiz Guizi</p>
-    </footer>
-
-    <script src="static/script.js"></script>
-
-</body>
-</html>
+{{ define "index" }}
+    {{ template "head" }}
+        <header>
+            <h1>• MENU •</h1>
+        </header>
+        <section>
+            <div>
+                <p>Escolha uma das opções:</p>
+                <p><form action="/contatos" method="post"><input type="submit" value="LISTAR CONTATOS"></form></p>
+            </div>
+        </section>
+    {{ template "foot" }}
+{{ end }}
